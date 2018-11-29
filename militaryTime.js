@@ -5,6 +5,8 @@ function toMilitary (time) {
   
   if(time.includes("pm")) {
     hours = parseInt(hours) + 12;
+    if (hours>23)
+      hours = 0;
   }
   
   if ( (hours+"").length === 1)
@@ -13,4 +15,4 @@ function toMilitary (time) {
   return hours + ":" + mins;
 }
 
-console.log(toMilitary("3:00pm"))
+console.log(toMilitary("12:00pm"))
